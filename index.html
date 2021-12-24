@@ -1,0 +1,77 @@
+<html>
+        <head>
+            
+            <script>
+                function smit(){
+                    document.getElementById("myFun").innerHTML ="this text is via script -> smit()"
+                }
+            </script>
+        </head>
+
+    <body style="text-align: center;">
+        <h2>My first javascript </h2>
+        <button type="button" onclick="document.getElementById('smit').innerHTML = Date()">
+            click To show current time 
+        </button>
+        <h2 id="smit"></h2>
+        <h2 id="demo">click to welcome the javascript</h2>
+        <button type="button" onclick='document.getElementById("demo").innerHTML = "WELCOME TO THE JAVASCRIPT"'>
+            click!
+        </button><br>
+        <!-- start exapmle of bulb on-off  -->
+        <button onclick="document.getElementById('myImg').src='pic_bulbon.gif'">
+            click to turn on light
+        </button>
+        <img src="pic_bulboff.gif" id="myImg">
+        <button onclick="document.getElementById('myImg').src='pic_bulboff.gif'">
+            click to turn off light
+        </button><br>
+        <!-- end exapmle of bulb on-off  -->
+        <p id="changeStyle">welcome to the simform</p>
+        <button onclick="document.getElementById('changeStyle').style.fontSize='50px'">
+        click to change style 
+        </button>
+        <button onclick="document.getElementById('changeStyle').style.display='none'">
+        click to hide above text
+        </button>
+        <!-- javascript script add in head  -->
+        <p id="myFun">-------</p>
+        <button type="button" onclick="smit()">Click to change</button>
+        <p id="carss"></p>
+        <p id="car11"></p>
+        <!-- script add in body -->
+        <script>
+            function smit1()
+            {
+                document.getElementById("myFun1").innerHTML ="this text is via body -> smit1()"
+            }
+            window.alert(4+5);
+            const cars = ["hyundai","maruti","audi"];
+            cars[0] = "toyota";
+            cars.push("bmw");
+            document.getElementById("carss").innerHTML = cars;
+
+            const car1 = {type:"volvo" , model:502 , color : "white"};
+            car1.color = "yellow";
+            car1.owner = "smit";
+            document.getElementById("car11").innerHTML = "car owner is " + car1.owner;
+        </script>
+        
+        <p id="myFun1">----</p>
+        <button type="button" onclick="smit1()">Click here !</button>
+        <!-- script added external -->
+        <p id="para1">click below button to change paragraph</p>
+        <button type="button" onclick="para()">Click to change paragraph</button>
+
+        <p id="add">click below button to check sum of 4 + 5</p>
+        <button type="button" onclick="document.getElementById('add').innerHTML = 4 + 5 ">
+
+        Click to sum 
+        </button>
+        <h2>window print method</h2>
+        <p>click below button to print entire page</p>
+        <button onclick="window.print()">click to print !</button><br>
+        
+    </body>
+    <script src="myScript.js"></script>
+</html>
