@@ -39,6 +39,21 @@
         <button type="button" onclick="smit()">Click to change</button>
         <p id="carss"></p>
         <p id="car11"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+        <p id="demo6"></p>
+        <p id="demo7"></p>
+        <p id="demo8">Good Evening!</p>
+        <p id="demo9"></p>
+        <p id="demo10"></p>
+
+        <p id="demo90"></p>
+        <p id="demo20"></p>
+        <p id="demo14"></p>
+        <button onclick="add13()" >Count!</button>
+        <p id="demo21">0</p>
+
         <!-- script add in body -->
         <script>
             function smit1()
@@ -55,6 +70,82 @@
             car1.color = "yellow";
             car1.owner = "smit";
             document.getElementById("car11").innerHTML = "car owner is " + car1.owner;
+            let fname = "smit";
+            let lname = "thakkar";
+            let fulname = fname + " " +lname ;
+            document.getElementById("demo3").innerHTML = fulname ;
+            let checktype = "smit";
+            let checktype1 = 10 ;
+            let checktype2 = ["smit","parth","abc"];
+            let checktype3;
+            console.log(typeof(checktype));
+            console.log(typeof(checktype1));
+            console.log(typeof(checktype2));
+            console.log(typeof(checktype3));
+            const person = {
+                firstname : "smit",
+                lastname : "thakkar",
+                age : 21 ,
+                education : "mca"
+            };
+            document.getElementById("demo4").innerHTML = person.firstname +  " is " + person.age + " years old " ;
+            let txt = "smit";
+            let x1=txt.length;
+            console.log(x1);
+            let str = "Please locate where 'locate' occurs!";
+            document.getElementById("demo5").innerHTML = str.indexOf("locate");
+            const fruit = ["banana","mango","apple","orange"];
+            let flen = fruit.length;
+            let text = "<ul>";
+            for (let i =0;i<flen;i++)
+            {
+                text += "<li>" + fruit[i] + "</li>";
+
+            }
+            text += "</ul>";
+            document.getElementById("demo6").innerHTML = text;
+            const numbers1 = [45, 4, 9, 16, 25];
+            const numbers2 = numbers1.map(myFunction);
+
+            document.getElementById("demo7").innerHTML = numbers2;
+
+            function myFunction(value, index, array) {
+            return value * 2;
+            }
+            if (new Date().getHours() < 18) {
+             document.getElementById("demo8").innerHTML = "Good day!";
+}
+            let day;
+            switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case  6:
+                day = "Saturday";
+            }
+            document.getElementById("demo9").innerHTML = "Today is " + day;
+            const cars10 = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+            let text1 = "";
+            for (let i = 0; i < cars10.length; i++) {
+            text1 += cars10[i] + "<br>";
+            document.getElementById("demo10").innerHTML = text1;
+            }
         </script>
         
         <p id="myFun1">----</p>
@@ -71,7 +162,7 @@
         <h2>window print method</h2>
         <p>click below button to print entire page</p>
         <button onclick="window.print()">click to print !</button><br>
-        
+        <button onclick="this.innerHTML=Date()">the time is ??</button>
     </body>
     <script src="myScript.js"></script>
 </html>
